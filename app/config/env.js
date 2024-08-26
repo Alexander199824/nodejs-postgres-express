@@ -1,9 +1,9 @@
 
 const env = {
-  database: 'umg_salama_12342',
-  username: 'umg_salama_12342_user',
-  password: 'N7kojavAERwNjq57dWimuK15P4xgmML6',
-  host: 'dpg-cqin53qj1k6c739hjtlg-a.oregon-postgres.render.com',
+  database: 'salmaumg24912342',
+  username: 'salmaumg24912342_user',
+  password: 'gi0f0LnBLtncu4xuVomsWNMLfvJfrpq7',
+  host: 'dpg-cr6g6rq3esus73f3f4m0-a.oregon-postgres.render.com',
   dialect: 'postgres',
   pool: {
     max: 5,
