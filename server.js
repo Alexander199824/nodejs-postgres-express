@@ -9,20 +9,6 @@ var bodyParser = require('body-parser');
 // Importa la configuración de la base de datos
 const db = require('./app/config/db.config.js');
 
-// Verificar la conexión a la base de datos
-db.sequelize.authenticate()
-  .then(() => {
-    console.log('Conexión a la base de datos establecida exitosamente.');
-  })
-  .catch(err => {
-    console.error('No se pudo conectar a la base de datos:', err);
-  });
-  
-// Sincroniza la base de datos: force: true eliminará la tabla si ya existe
-db.sequelize.sync({ force: false }).then(() => {
-  console.log('Resync without dropping tables');
-});; 
-
 // Importa el enrutador de rutas
 let router = require('./app/routers/router.js');
 
