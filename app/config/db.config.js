@@ -33,17 +33,11 @@ db.Sequelize = Sequelize;
 // Almacena la instancia de conexión de Sequelize en el objeto db
 db.sequelize = sequelize;
 
-// Importa y define el modelo 'Customer' en el objeto db
-db.Customer = require('../models/customer.model.js')(sequelize, Sequelize);
+// Importa y define los modelos en el objeto db
+db.Libros = require('../models/libros.model.js')(sequelize, Sequelize);
+db.Prestamos = require('../models/prestamos.model.js')(sequelize, Sequelize);
 
 // Exporta el objeto db para usarlo en otras partes de la aplicación
 module.exports = db;
 
-// Verificar la conexión a la base de datos
-db.sequelize.authenticate()
-  .then(() => {
-    console.log('Conexión a la base de datos establecida exitosamente.');
-  })
-  .catch(err => {
-    console.error('No se pudo conectar a la base de datos:', err);
-  });
+

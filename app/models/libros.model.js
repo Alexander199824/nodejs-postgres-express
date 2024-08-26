@@ -1,9 +1,10 @@
+// Exporta una función que define el modelo de 'Libros'
 module.exports = (sequelize, Sequelize) => {
-    const Libro = sequelize.define('libro', {
+    const Libros = sequelize.define('libros', {
         codigoLibro: {
             type: Sequelize.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true // Autoincremento para el código del libro
         },
         nombreLibro: {
             type: Sequelize.STRING(60)
@@ -23,13 +24,13 @@ module.exports = (sequelize, Sequelize) => {
         numeroPaginas: {
             type: Sequelize.INTEGER
         },
-        anoEdicion: {
-            type: Sequelize.DATE
+        anioEdicion: {
+            type: Sequelize.DATE // Usamos DATE para Fecha/Hora
         },
         precioLibro: {
-            type: Sequelize.FLOAT 
+            type: Sequelize.FLOAT // Usamos FLOAT para el campo de moneda
         }
     });
-
-    return Libro;
+    
+    return Libros;
 };
