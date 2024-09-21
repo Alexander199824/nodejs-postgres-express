@@ -34,8 +34,18 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 // Importa y define los modelos en el objeto db
-db.Libros = require('../models/libros.model.js')(sequelize, Sequelize);
-db.Prestamos = require('../models/prestamos.model.js')(sequelize, Sequelize);
+db.Clientes = require('../models/clientes.model.js')(sequelize, Sequelize);
+db.Productos = require('../models/productos.model.js')(sequelize, Sequelize);
+db.Usuarios = require('../models/usuarios.model.js')(sequelize, Sequelize);
+db.Pedidos = require('../models/pedidos.model.js')(sequelize, Sequelize);
+db.DetallesPedido = require('../models/detalles_pedido.model.js')(sequelize, Sequelize);
+db.Inventario = require('../models/inventario.model.js')(sequelize, Sequelize);
+db.Locales = require('../models/locales.model.js')(sequelize, Sequelize);
+db.VentasLocales = require('../models/ventas_locales.model.js')(sequelize, Sequelize);
+db.Roles = require('../models/roles.model.js')(sequelize, Sequelize);
+db.Proveedores = require('../models/proveedores.model.js')(sequelize, Sequelize);
+db.Categorias = require('../models/categorias.model.js')(sequelize, Sequelize);
+db.Transacciones = require('../models/transacciones.model.js')(sequelize, Sequelize);
 
 // Exporta el objeto db para usarlo en otras partes de la aplicación
 module.exports = db;
